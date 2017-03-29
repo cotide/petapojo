@@ -395,7 +395,7 @@ userInfo.setUserType(UserType.Coder);
 
 database.update(userInfo);
 ```
-##时间类型支持 org.joda.time.DateTime
+## 时间类型支持 org.joda.time.DateTime
 
 `PetaPojo`支持`org.joda.time.DateTime`类型，映射的数据库表字段类型为datetime：
 ```java
