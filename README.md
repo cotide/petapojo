@@ -12,7 +12,7 @@
 2. 理解JAVA的基础数据库组件
 3. 若开发成功，则原有的团队与项目基本上能够很好地迁移至JAVA开发环境，提升开发效率
 
-##功能概述
+## 功能概述
 
 - 轻量级
 - 用于简单的POJO
@@ -23,14 +23,14 @@
 - 更好的参数支持
 - 仍然使用SQL语法，并提供强大的Sql生成器类
 
-##开源
+## 开源
 下载
 
 GitHub：  https://github.com/gejinlove/petapojo/
 
 ## 怎么使用
 
-###引用jar包
+### 引用jar包
 
 下载petapojo.jar包后，在项目中进行引用
 
@@ -84,7 +84,7 @@ UserInfo userInfo = database.firstOrDefault(UserInfo.class,
 
 ```
 
-###分页
+### 分页
 
 ```java
 // 参数说明：
@@ -157,7 +157,7 @@ database.delete(UserInfo.class,1);
 database.delete(UserInfo.class,"WHERE id = ?",1);
 ```
 
-###自动添加查询列
+### 自动添加查询列
 
 当我们在使用ORM时，我们常常需要先编写查询列名及表名的SQL语句SELECT * FROM user_info，其实是非常影响开发效率的。
 因此，PetaPojo增加了自动添加查询列与表名的自动匹配功能。
@@ -171,7 +171,7 @@ PetaPojo可以允许简化为：
 UserInfo userInfo = database.firstOrDefault(UserInfo.class,"WHERE id = ?",1);
 ```
 
-##查询组装器 Sql Builder
+## 查询组装器 Sql Builder
 
 在我们查询数据库时，经常需要添加一些条件或排序之类的。总之，尽可能地让SQL语句动态化或更灵活，以应对复杂的业务需要。
 与此同时，如果我们只是进行单纯的SQL硬编写，开发效率将会是一个很大的问题，维护亦比较复杂费时。
@@ -263,7 +263,7 @@ sql.orderBy("createDate DESC");
 List<UserInfo> userList = database.query(UserInfo.class,sql);
 ```
 
-##枚举支持
+## 枚举支持
 
 在开发中，经常会碰到一些需要使用枚举的地方，如订单状态，用户类型等。
 JAVA默认枚举类型不是很好用，最主要的问题在于：用户类型，订单状态这些枚举在系统中我们可以理解为一个键值对的列表，而JAVA默认枚举的index是不可自定义的。
